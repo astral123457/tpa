@@ -1,0 +1,15 @@
+name: tpa
+version: '1.0'
+main: org.exampleorg.example.pow4.Pow4.tpa.Tpa
+api-version: '1.21'
+description: Plugin TPA para teletransportar jogadores após aprovação.
+commands:
+  tpa:
+    description: Envia uma solicitação de teleporte para outro jogador.
+    usage: /tpa <jogador>
+  tpaccept:
+    description: Aceita uma solicitação de teleporte.
+    usage: /tpaccept <jogador>
+  tpdeny:
+    description: Recusa uma solicitação de teleporte.
+    usage: /tpdeny <jogador>
