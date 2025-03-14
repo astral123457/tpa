@@ -2,6 +2,8 @@
 
 Tpa posibilita teleportar ao jogador amigo mandando 
 solicitacao Aceitar ou recuzar
+Support EN e BR comfiguravel
+Support enable & disable Plugin
 Comando: /tpa <name>
 
 ```mermaid
