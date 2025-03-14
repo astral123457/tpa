@@ -84,8 +84,8 @@ public final class Tpa extends JavaPlugin {
             // Teletransporta o jogador que pediu
             Location targetLocation = player.getLocation();
             requester.teleport(targetLocation);
-            player.sendMessage("§aVocê aceitou a solicitação de TPA de " + requester.getName() + ".");
-            requester.sendMessage("§aSua solicitação de TPA foi aceita por " + player.getName() + ".");
+            player.sendMessage("§aVocê aceitou a solicitação de §f§lTPA§a de §d§l" + requester.getName() + ".");
+            requester.sendMessage("§aSua solicitação de §f§lTPA§a foi aceita por §d§l" + player.getName() + ".");
 
             // Remove a solicitação do mapa
             tpaRequests.remove(player.getUniqueId());
@@ -111,8 +111,8 @@ public final class Tpa extends JavaPlugin {
             }
 
             // Notifica o jogador
-            player.sendMessage("§cVocê recusou a solicitação de TPA de " + requester.getName() + ".");
-            requester.sendMessage("§cSua solicitação de TPA foi recusada por " + player.getName() + ".");
+            player.sendMessage("§cVocê recusou a solicitação de §f§lTPA§c de §d§l" + requester.getName() + ".");
+            requester.sendMessage("§cSua solicitação de §f§lTPA §cfoi recusada por §d§l" + player.getName() + ".");
 
             // Remove a solicitação do mapa
             tpaRequests.remove(player.getUniqueId());
@@ -124,14 +124,14 @@ public final class Tpa extends JavaPlugin {
 
     private void sendInteractiveMessage(Player target, Player requester) {
         // Texto inicial
-        TextComponent message = new TextComponent("§e" + requester.getName() + " quer se teletransportar para você. Aceitar? ");
+        TextComponent message = new TextComponent("§e§l☾☼§d§l" + requester.getName() + " §6quer se teletransportar para você. Aceitar? \n");
 
         // Botão Aceitar
-        TextComponent acceptButton = new TextComponent("\n§b§l  [ACEITAR §2✔§b§l] §e| ");
+        TextComponent acceptButton = new TextComponent("\n§b§l  [ACEITAR][§2§l✔§b§l]   §e§l|   ");
         acceptButton.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tpaccept " + requester.getName()));
 
         // Botão Recusar
-        TextComponent denyButton = new TextComponent(" §4§l[RECUSAR §c✘§4§l]");
+        TextComponent denyButton = new TextComponent("§4§l[RECUSAR][§c§l✘§4§l]\n\n");
         denyButton.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tpdeny " + requester.getName()));
 
         // Combina os componentes
