@@ -127,11 +127,11 @@ public final class Tpa extends JavaPlugin {
         TextComponent message = new TextComponent("§e" + requester.getName() + " quer se teletransportar para você. Aceitar? ");
 
         // Botão Aceitar
-        TextComponent acceptButton = new TextComponent("§a[ACEITAR] ");
+        TextComponent acceptButton = new TextComponent("\n§b§l  [ACEITAR §2✔§b§l] §e| ");
         acceptButton.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tpaccept " + requester.getName()));
 
         // Botão Recusar
-        TextComponent denyButton = new TextComponent("§c[RECUSAR]");
+        TextComponent denyButton = new TextComponent(" §4§l[RECUSAR §c✘§4§l]");
         denyButton.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tpdeny " + requester.getName()));
 
         // Combina os componentes
