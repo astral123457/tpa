@@ -161,9 +161,23 @@ public final class Tpa extends JavaPlugin {
         }
 
         MessageManager messageManager = new MessageManager();
-        String language = loadLanguage();
 
         Player player = (Player) sender;
+
+        String language = player.getLocale().toLowerCase();
+        if (language.startsWith("pt")) {
+            language = "br";
+        } else if (language.startsWith("en")) {
+            language = "en";
+        } else if (language.startsWith("es")) {
+            language = "es";
+        } else if (language.startsWith("fr")) {
+            language = "fr";
+        } else if (language.startsWith("de")) {
+            language = "de";
+        } else {
+            language = "default"; // Idioma padrão caso não seja reconhecido
+        }
 
         if (label.equalsIgnoreCase("tpa")) {
             // Comando /tpa
@@ -259,7 +273,20 @@ public final class Tpa extends JavaPlugin {
 
     private void sendInteractiveMessage(Player target, Player requester) {
         MessageManager messageManager = new MessageManager();
-        String language = loadLanguage(); // Carrega o idioma configurado no `config.json`
+        String language = target.getLocale().toLowerCase();
+        if (language.startsWith("pt")) {
+            language = "br";
+        } else if (language.startsWith("en")) {
+            language = "en";
+        } else if (language.startsWith("es")) {
+            language = "es";
+        } else if (language.startsWith("fr")) {
+            language = "fr";
+        } else if (language.startsWith("de")) {
+            language = "de";
+        } else {
+            language = "default"; // Idioma padrão caso não seja reconhecido
+        }
 
         // Mensagem inicial
         String initialMessage = "§e§l☾☼§d§l" + requester.getName() + " §6" +
