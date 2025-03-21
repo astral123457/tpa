@@ -4,17 +4,11 @@ Tpa posibilita teleportar ao jogador amigo mandando
 
 solicitacao Aceitar ou recuzar
 
-# Language
-
-Support EN e BR Automatic
+Support EN e BR comfiguravel
 
 Support enable & disable Plugin
 
 Comando: /tpa <name>
-
-
-
-![image](https://github.com/user-attachments/assets/49b0a862-daa5-418b-8bea-14bf1c3dec4e)
 
 ```mermaid
 graph TD;
@@ -26,5 +20,7 @@ graph TD;
     Aceitar-->Fim;
     Recusar-->Fim;
 ```
+
+![image](https://github.com/user-attachments/assets/49b0a862-daa5-418b-8bea-14bf1c3dec4e)
 
 
