@@ -1,5 +1,5 @@
 name: tpa
-version: '1.0'
+version: '1.6'
 main: org.exampleorg.example.pow4.Pow4.tpa.Tpa
 api-version: '1.21'
 description: Plugin TPA para teletransportar jogadores após aprovação.

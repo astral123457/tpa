@@ -31,16 +31,31 @@ public final class Tpa extends JavaPlugin {
     private static final String FOLDER_PATH = "plugins/Tpa";
     private static final String CONFIG_FILE = FOLDER_PATH + "/config.json";
     private static final String MESSAGES_FILE = FOLDER_PATH + "/messages.json";
+    // cores ANSI mais comuns que você pode usar no console Java
     private static final String ANSI_RESET = "\u001B[0m";
-    private static final String ANSI_AQUA = "\u001B[36m"; // Cor aqua
+    private static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_GREEN = "\u001B[32m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
+    private static final String ANSI_BLUE = "\u001B[34m";
+    private static final String ANSI_DARK_BLUE = "\u001B[94m";
+
+    private static final String ANSI_PURPLE = "\u001B[35m";
+    private static final String ANSI_CYAN = "\u001B[36m"; // Cor aqua
+    private static final String ANSI_DARK_CYAN = "\u001B[96m";
+
+
+    private static final String ANSI_WHITE = "\u001B[37m";
+
+    private static final String ANSI_DARK_GRAY = "\u001B[90m";// (Cinza escuro/Negrito)
+    private static final String ANSI__GRAY = "\u001B[37m";// (Cinza claro/Branco)
 
     @Override
     public void onEnable() {
-        getLogger().info(ANSI_AQUA + "Plugin TPA habilitado!" + ANSI_RESET);
+        getLogger().info(ANSI_CYAN + "Plugin TPA habilitado!" + ANSI_RESET);
         //getLogger().info("Plugin TPA habilitado!");
-        getLogger().info("  ___   __    __");
-        getLogger().info("   |   |__)  |__|  Tpa v1.3");
-        getLogger().info("   |   |     |  |  Spigot on Bukkit - CraftBukkit");
+        getLogger().info(ANSI_CYAN+"  ___   __    __"+ ANSI_RESET);
+        getLogger().info(ANSI_CYAN+"   |   "+ANSI_DARK_BLUE+"|"+ANSI_BLUE+"__)  |__|  "+ANSI_GREEN+"Tpa v1.6" + ANSI_RESET);
+        getLogger().info(ANSI_CYAN+"   |   "+ANSI_DARK_BLUE+"|     |  |  "+ANSI_YELLOW+"Spigot on Bukkit - CraftBukkit" + ANSI_RESET);
         createFolderAndFiles();
         if (!isPluginEnabled()) {
             getLogger().warning("Plugin desativado via configuração.");
@@ -70,9 +85,9 @@ public final class Tpa extends JavaPlugin {
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
                 gson.toJson(defaultConfig, writer);
 
-                getLogger().info("Arquivo config.json criado com configurações padrão.");
+                getLogger().info("Arquivo config.json criado.");
             } catch (IOException e) {
-                getLogger().severe("Erro ao criar config.json: " + e.getMessage());
+                getLogger().severe("Erro ao criar config.json: "+ e.getMessage());
             }
         }
 
@@ -493,6 +508,8 @@ public final class Tpa extends JavaPlugin {
         // Envia a mensagem interativa ao jogador alvo
         target.spigot().sendMessage(message);
     }
+
+    
 
 
 }
