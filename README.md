@@ -25,4 +25,6 @@ graph TD;
 
 ![image](https://github.com/user-attachments/assets/49b0a862-daa5-418b-8bea-14bf1c3dec4e)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H411P12P)
+
 
